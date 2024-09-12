@@ -20,7 +20,7 @@ sed -i 's/ /\t/g' tax.count
 
 ##Add counts from each word in both files and calc the percentage of the total that is from query file
 #join background/GTDB_tax.count tax.count|sed 's/ /\t/g' > tax.sum
-awk 'NR==FNR{a[$1]=$1"\t"$2; next} ($1 in a){print a[$1]"\t"$2}' background/R207v2_GTDB_tax.count tax.count > tax.sum
+awk 'NR==FNR{a[$1]=$1"\t"$2; next} ($1 in a){print a[$1]"\t"$2}' background/GTDB_tax.count tax.count > tax.sum
 awk '{print $1"\t"($3/($2 + $3)*100)}' tax.sum > tax.novelty
 awk '{print $1"\t"$2"\t"$3"\t"($2 + $3)"\t"($3/($2 + $3)*100)}' tax.sum > tax.novelty.stats
 sed  '1i Taxon #_of_Ref_genome #_of_New_gen #_of_Total_genomes' tax.novelty.stats|sed 's/ /\t/g' > tmp
