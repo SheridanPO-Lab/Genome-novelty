@@ -23,10 +23,10 @@ We have provided an example input file in "Example.input"
 ```
 sh MAG_Nov_tree.sh Example.input
 ```
-This generates the following output files:
-**tax.novelty.50pcNovelty:**
-**tax.novelty.75pcNovelty:**
-**tax.novelty.stats:**
-**tax.novelty.nwk:**
+This generates the following output files: <br/>
+**tax.novelty.50pcNovelty:**................ <br/>
+**tax.novelty.75pcNovelty:**................ <br/>
+**tax.novelty.stats:**.................. <br/>
+**tax.novelty.nwk:**................ <br/>
 
 NOTE: Input data should be analysed with te same version of GTDB as the reference database, as GTDB taxonomic names can change between versions.
