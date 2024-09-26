@@ -1,8 +1,6 @@
 # Genome-novelty
 Calculates novelty of a genome at different taxonomic levels against a reference database
 
-Add usage
-
 The input data for this script is the output results from https://github.com/Ecogenomics/GTDBTk with the first line removed and should look something like this:
 
 ```
@@ -17,9 +15,18 @@ AcS14-31        d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkhold
 AcS9-15 d__Bacteria;p__Proteobacteria;c__Alphaproteobacteria;o__UBA1301;f__UBA1301;g__UBA6038;s__       N/A     N/A     N/A     N/A     N/A     GCA_001896865.1 95.0    d__Bacteria;p__Proteobacteria;c__Alphaproteobacteria;o__UBA1301;f__UBA1301;g__UBA6038;s__UBA6038 sp001896865 80.56   0.49    d__Bacteria;p__Proteobacteria;c__Alphaproteobacteria;o__UBA1301;f__UBA1301;g__UBA6038;s__       taxonomic classification defined by topology and ANI    N/A     GCA_001898015.1, s__UBA6038 sp001898015, 95.0, 77.3, 0.19; GCA_003158585.1, s__UBA6038 sp003158585, 95.0, 77.12, 0.17; GCA_002307725.1, s__UBA6038 sp002307725, 95.0, 76.99, 0.16; GCA_002307315.1, s__UBA6038 sp002307315, 95.0, 76.92, 0.17; GCA_002429315.1, s__UBA6038 sp002429315, 95.0, 76.81, 0.15; GCA_003139615.1, s__UBA6038 sp003139615, 95.0, 76.62, 0.16; GCA_003131925.1, s__UBA6038 sp003131925, 95.0, 76.2, 0.08  64.15   11      0.9495404047755291      N/A
 AcS13-74        d__Bacteria;p__Bacteroidota;c__Kapabacteria;o__Palsa-1295;f__Palsa-1295;g__PALSA-1295;s__       N/A     N/A     N/A     N/A     N/A     GCA_003151825.1 95.0    d__Bacteria;p__Bacteroidota;c__Kapabacteria;o__Palsa-1295;f__Palsa-1295;g__PALSA-1295;s__PALSA-1295 sp003151825      77.46   0.38    d__Bacteria;p__Bacteroidota;c__Kapabacteria;o__Palsa-1295;f__Palsa-1295;g__;s__ taxonomic classification defined by topology and ANI    N/A     N/A     48.81   11  0.8882616930588966       N/A
 ```
-
-We have previded an example input file in "Example.input"
-
-Add description of output files: tax.novelty.50pcNovelty,  tax.novelty.75pcNovelty, tax.novelty.stats, tax.novelty.nwk
+Usage:
+```
+sh MAG_Nov_tree.sh <input>
+```
+We have provided an example input file in "Example.input"
+```
+sh MAG_Nov_tree.sh Example.input
+```
+This generates the following output files:
+**tax.novelty.50pcNovelty:**
+**tax.novelty.75pcNovelty:**
+**tax.novelty.stats:**
+**tax.novelty.nwk:**
 
 NOTE: Input data should be analysed with te same version of GTDB as the reference database, as GTDB taxonomic names can change between versions.
