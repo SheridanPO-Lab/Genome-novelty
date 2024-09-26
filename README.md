@@ -24,9 +24,9 @@ We have provided an example input file in "Example.input"
 sh MAG_Nov_tree.sh Example.input
 ```
 This generates the following output files: <br/>
-**tax.novelty.50pcNovelty:**................ <br/>
-**tax.novelty.75pcNovelty:**................ <br/>
-**tax.novelty.stats:**.................. <br/>
-**tax.novelty.nwk:**................ <br/>
+**tax.novelty.50pcNovelty:** the number of genomes that have a genome novelty of equal or greater than 50% at phylum, class, order, family, genus and species level <br/>
+**tax.novelty.75pcNovelty:** the number of genomes that have a genome novelty of equal or greater than 75% at phylum, class, order, family, genus and species level <br/>
+**tax.novelty.stats:** Statistics of each taxonomic level identified in the dataset <br/>
+**tax.novelty.nwk:** Newick format taxonomically stratified cladogram of input dataset, with genome novelty displayed on the branches <br/>
 
 NOTE: Input data should be analysed with te same version of GTDB as the reference database, as GTDB taxonomic names can change between versions.
