@@ -1,6 +1,12 @@
 # Genome-novelty
 Calculates novelty of a genome at different taxonomic levels against a reference database
 
+First make a database with statistics of each taxon is GTDB with make-ref-DB.sh <br/>
+Usage:
+```
+sh make-ref-DB.sh <directory_where_you_download_GTDB>
+```
+Next use Genome_novelty to calculate the novelty of your query genomes at each taxon level  <br/>
 The input data for this script is the output results from https://github.com/Ecogenomics/GTDBTk with the first line removed and should look something like this:
 
 ```
